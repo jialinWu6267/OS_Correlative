@@ -3,7 +3,7 @@ import os
 
 def IncreaseSerialNumber(filepath):
     '''
-    三位数的序列 每个文件夹上添加序号
+    每个文件夹上添加序号（三位数的序号，相当于重命名
     :param path: filepath
     '''
     for num,file in enumerate(os.listdir(filepath)):
@@ -15,12 +15,12 @@ def IncreaseSerialNumber(filepath):
         else:
             index = str(num)
         print(index, file)
-        os.rename(os.path.join(filepath,file),os.path.join(filepath,index+"、"+file))
+        os.rename(os.path.join(filepath,file),os.path.join(filepath,index+"、"+file)) 
 
 
 def DeleteSerialNumber(filepath,N):
     '''
-    删除文件夹下的文件序列
+    删除文件夹下的文件序号
     :param N: 删除前面4位
     :param path:
     :return:
